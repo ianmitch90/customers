@@ -8,12 +8,20 @@ function fetchPerson(id){
       console.log("data", json)
 
       var person = {}
+
+
       person.name = json.results[0].name.first + " " + json.results[0].name.last;
+
       person.street = json.results[0].location.street;
+
       person.email = json.results[0].email;
+
       person.address2 = json.results[0].location.city + ", " + json.results[0].location.state + " " + json.results[0].location.postcode;
+
       person.phone = json.results[0].phone;
+
       person.icon = json.results[0].picture.large;
+
       person.ssn = json.results[0].id.value;
 
       const html = `
@@ -35,6 +43,8 @@ function fetchPerson(id){
       document.querySelector(".customers").insertAdjacentHTML('afterbegin', html)
     })
 }
+
+
 for (var i = 1; i <= 12; i++) {
   fetchPerson(i)
 }

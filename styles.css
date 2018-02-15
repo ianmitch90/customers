@@ -13,8 +13,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: 1em;
-}
 
+}
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
 .personmer {
   display: flex;
   flex-wrap: wrap;
@@ -25,4 +29,10 @@ body {
   border-style: solid;
   border-collapse: collapse;
   border-width: thin;
+
+  
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+
 }
